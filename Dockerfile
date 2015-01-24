@@ -1,10 +1,8 @@
-FROM resin/rpi-raspbian:wheezy
+FROM resin/rpi-raspbian:wheezy-2015-01-21
 
 # Install Dropbear.
 RUN apt-get update && apt-get install dropbear
 
-ADD start /start
+COPY start /app
 
-RUN chmod a+x /start
-
-CMD /start
+CMD ["bash", "app/start"]
