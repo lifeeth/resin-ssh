@@ -7,4 +7,4 @@ RUN apt-get install dropbear i2c-tools
 
 COPY start.sh /app
 
-CMD ["bash", "app/start.sh"]
+CMD ["bash", "app/start"]
