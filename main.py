@@ -1,1 +1,2 @@
-print "hello python!"
+while True:
+	print "hello python!"
