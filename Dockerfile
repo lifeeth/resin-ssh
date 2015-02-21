@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:wheezy-2015-01-21
+FROM resin/rpi-raspbian:latest
 
 RUN apt-get update && apt-get install -y python python-dev python-pip
 
