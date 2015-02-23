@@ -1,10 +1,10 @@
-FROM resin/rpi-raspbian:wheezy
+FROM resin/rpi-raspbian:latest
+
+RUN apt-get update && apt-get install -y python python-dev python-pip
 
 # Install Dropbear.
-RUN apt-get update && apt-get install dropbear
+RUN apt-get install -y dropbear
+RUN pip install flask
+COPY . /app
 
-ADD start /start
-
-RUN chmod a+x /start
-
-CMD /start
+CMD ["bash", "/app/start.sh"]
