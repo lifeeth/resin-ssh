@@ -15,7 +15,7 @@ Add an environment variable called PASSWD with the value to set as root password
 Then run
 
 ```sh
-$ @root<YOUR-PI'S-IP>
+$ ssh root@<YOUR-PI'S-IP>
 ```
 
 The code you just pushed is kept in the app directory.
