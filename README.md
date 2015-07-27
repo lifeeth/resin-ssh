@@ -1,12 +1,12 @@
 resin-ssh
 =========
-This is a basic resin project that runs dropbear on boot which allows for ssh access. It's currently running a python script, but you could run any language you like as long as there is a continous process running to keep the container open to outside connections, in this case we are running a flash server. 
+This is a basic resin project that runs dropbear on boot which allows for ssh access. It's currently running a python script, but you could run any language you like as long as there is a continous process running to keep the container open to outside connections, in this case we are running a flask server. 
 
 If your running a node.js project with resin and would like ssh access you should look [here](https://github.com/craig-mulligan/resin-ssh-node).
 
 NOTE: This container enables SSH access as root with a PASSWORD stored in plain text - Do not use in production without modifications.
 
-#### SSH into you're pi. 
+#### SSH into your pi. 
 
 Add an environment variable called PASSWD with the value to set as root password.
 
