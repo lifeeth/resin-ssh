@@ -5,4 +5,4 @@ export PASSWD=${PASSWD:=root}
 echo "root:$PASSWD" | chpasswd
 
 #start your application from here...
-python app/main.py
+python main.py
