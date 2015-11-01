@@ -46,5 +46,5 @@ $ ssh-keygen -R <YOUR-PI'S-IP>
 It will then work as expected
 
 ```sh
-$ @root<YOUR-PI'S-IP>
+$ ssh root@<YOUR-PI'S-IP>
 ```
