@@ -10,7 +10,7 @@ RUN apt-get -q update && apt-get install -yq --no-install-recommends \
 
 # pip install python deps from requirements.txt
 # For caching until requirements.txt changes
-ADD ./requirements.txt /requirements.txt
+COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
 COPY . /usr/src/app
