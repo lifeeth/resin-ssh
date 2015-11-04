@@ -46,5 +46,5 @@ $ ssh-keygen -R <YOUR-DEVICE'S-IP>
 It will then work as expected
 
 ```sh
-$ @root<YOUR-DEVICE'S-IP>
+$ ssh root@<YOUR-DEVICE'S-IP>
 ```
