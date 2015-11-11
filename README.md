@@ -2,11 +2,11 @@ resin-ssh
 =========
 This is a basic resin project that runs dropbear on boot which allows for ssh access. It's currently running a python script, but you could run any language you like as long as there is a continous process running to keep the container open to outside connections, in this case we are running a flask server. 
 
-If your running a node.js project with resin and would like ssh access you should look [here](https://github.com/craig-mulligan/resin-ssh-node).
+If your running a node.js project with resin and would like ssh access you should look [here](https://github.com/resin-io-projects/ssh-node).
 
 NOTE: This container enables SSH access as root with a PASSWORD stored in plain text - Do not use in production without modifications.
 
-#### SSH into your pi. 
+#### SSH into your device. 
 
 Add an environment variable called PASSWD with the value to set as root password.
 
@@ -15,13 +15,13 @@ Add an environment variable called PASSWD with the value to set as root password
 Then run
 
 ```sh
-$ ssh root@<YOUR-PI'S-IP>
+$ ssh root@<YOUR-DEVICE'S-IP>
 ```
 
 The code you just pushed is kept in the app directory.
 
 ```sh
-$ cd /app
+$ cd /usr/src/app
 ```
 
 
@@ -40,11 +40,11 @@ It is also possible that a host key has just been changed.
 To get around this remove the key.
 
 ```sh
-$ ssh-keygen -R <YOUR-PI'S-IP>
+$ ssh-keygen -R <YOUR-DEVICE'S-IP>
 ```
 
 It will then work as expected
 
 ```sh
-$ ssh root@<YOUR-PI'S-IP>
+$ ssh root@<YOUR-DEVICE'S-IP>
 ```
