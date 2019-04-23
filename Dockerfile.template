@@ -1,17 +1,9 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-stretch-run
 
-# #switch on systemd init system in container
-# ENV INITSYSTEM on
-
 # Install Dropbear.
 RUN install_packages dropbear
 
-# RUN apt-get update && apt-get install -yq --no-install-recommends \
-# 	dropbear \
-# 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# pip install python deps from requirements.txt
-# For caching until requirements.txt changes
+# Install Flask
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
